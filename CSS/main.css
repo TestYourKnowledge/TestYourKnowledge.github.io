@@ -1,0 +1,77 @@
+body{
+	background-color: #99CCFF;
+}
+
+#block{
+	background-color: #FFFFFF;
+	height: 800px;
+	width: 650px;
+	margin: 0 auto;
+	margin-top: 32px;
+	border-radius: 50px;
+	box-shadow: 10px 10px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 50px;
+}
+
+p{
+	font-size: 50pt;
+	font-family: fantasy;
+}
+
+#input{
+	height: 40px;
+	width: 400px;
+	box-shadow: 4px 4px;
+	font-size: 25px;
+ 	border: 6px groove #999999;
+ 	margin-top: 16%;
+ 	padding-left: 12px;
+ 	padding-right: 12px;
+}
+
+#button{
+	height: 20px;
+	width: 40px;
+}
+
+#end{
+	display: block;
+	position: fixed;
+	padding: 0;
+	width: 220px;
+	height: 88px;
+	right: 32px;
+	bottom: 32px;
+	cursor: pointer;	
+}
+
+#end div{
+	position: fixed;
+	text-align: center;
+	width: 200px;
+	height: 80px;
+	border-radius: 25px;
+	box-shadow: 8px 8px;
+	background-color: #FFFFFF;
+	padding: auto;
+	cursor: pointer;
+}
+
+#end div p{
+	margin-top: 20px;
+	font-size: 19px;
+	cursor: pointer;
+}
+
+#end div:hover{
+	width: 220px;
+	height: 88px;
+	box-shadow: 9px 9px;
+	position: fixed;
+}
+
+#end div:hover p{
+	font-size: 22px;
+}

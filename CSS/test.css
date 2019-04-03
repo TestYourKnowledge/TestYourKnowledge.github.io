@@ -1,0 +1,211 @@
+html{
+	overflow: hidden;
+}
+
+body{
+	background-color: #99CCFF;
+	/*background-image: url(WALKING.gif);*/
+	cursor: default;
+}
+
+#ul1{
+	position: fixed;
+	margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+    margin-left: 16px;
+}
+
+#ul2{
+	position: fixed;
+	margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+    margin-left: 85px;
+}
+
+a{
+	color: #000000;
+	text-align: center;
+}
+
+ul li{
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+ul li a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	padding: 0 auto;
+	border-radius: 8px;
+	box-shadow: 2px 2px black;
+	margin: 0 auto;
+}
+
+ul li a:not(.empty):hover{
+	width: 60px;
+	height: 60px;
+}
+
+li .empty {
+	opacity: 0.5;
+}
+
+#end{
+	display: block;
+	position: fixed;
+	padding: 0;
+	width: 220px;
+	height: 88px;
+	right: 32px;
+	bottom: 32px;
+	cursor: pointer;	
+}
+
+#end div{
+	position: fixed;
+	text-align: center;
+	width: 200px;
+	height: 80px;
+	border-radius: 25px;
+	box-shadow: 8px 8px;
+	background-color: #FFFFFF;
+	padding: auto;
+	cursor: pointer;
+}
+
+#end div p{
+	margin-top: 20px;
+	font-size: 19px;
+	cursor: pointer;
+}
+
+#end div:hover{
+	width: 220px;
+	height: 88px;
+	box-shadow: 9px 9px;
+	position: fixed;
+}
+
+#end div:hover p{
+	font-size: 22px;
+}
+
+section{
+	height: 100vh;
+	width: 100vh;
+	margin: auto;
+	padding: auto;
+	scroll-behavior: smooth;
+	text-align: center;
+	padding-top: 4%;
+}
+
+.block{
+	background-color: #FFFFFF;
+	min-height: 200px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50px;
+	box-shadow: 10px 10px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 32px;
+	position: relative;
+}
+
+p{
+	font-size: 18pt;
+	font-family: sans-serif, fantasy;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.num{
+	font-size: 20pt;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+input{
+	height: 16px;
+	width: 200px;
+	box-shadow: 4px 4px;
+	font-size: 11pt;
+ 	border: 6px groove #999999;
+ 	left: 12px;
+ 	right: 12px;
+ 	margin: 24px;
+ 	padding-left: 5px;
+ 	padding-right: 5px;
+ }
+
+table{
+	border-collapse: collapse;
+	border: 2px solid black;
+	border-color: black;
+	text-align: center;
+	font-size: 20pt;
+	margin: 32px;
+	margin-left: 50px;
+}
+
+table th, td{
+	border: 2px solid black;
+	padding: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+table td{
+	min-width: 30px;
+	text-align: left;
+}
+
+table th{
+	background-color: #CCCCCC;
+}
+
+.Table{
+	margin: 0 auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.Table th, td{
+	width: 250px;
+	min-height: 32px;
+}
+
+.Tables td{
+	background-color: #FFFFFF;
+	min-height: 300px;
+	font-size: 16pt;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+#Pascal8 {
+	padding-left: 36px;
+}
+
+#Python8 {
+	padding-left: 50px;
+}
+
+#Pascal11 {
+	padding-left: 36px;
+}
+
+#Python11 {
+	padding-left: 50px;
+}
