@@ -30,15 +30,15 @@ a{
 }
 
 ul li{
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	text-align: center;
 }
 
 ul li a{
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
@@ -49,8 +49,8 @@ ul li a{
 }
 
 ul li a:not(.empty):hover{
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 }
 
 li .empty {
@@ -109,10 +109,9 @@ section{
 
 .block{
 	background-color: #FFFFFF;
-	min-height: 200px;
-	width: 800px;
-	height: 800px;
-	margin-left: auto;
+	min-height: 150px;
+	width: 850px;
+	margin-left: -8%;
 	margin-right: auto;
 	border-radius: 50px;
 	box-shadow: 10px 10px;
@@ -123,7 +122,7 @@ section{
 }
 
 p{
-	font-size: 18pt;
+	font-size: 12pt;
 	font-family: sans-serif, fantasy;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -183,11 +182,11 @@ table th{
 }
 
 .Table th, td{
-	width: 250px;
+	width: 280px;
 	min-height: 32px;
 }
 
-.Tables td{
+.Table td{
 	background-color: #FFFFFF;
 	min-height: 300px;
 	font-size: 16pt;
@@ -195,12 +194,34 @@ table th{
 	padding-bottom: 16px;
 }
 
+.Table1{
+	margin: 0 auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.Table1 th, td{
+	width: 280px;
+	min-height: 32px;
+}
+
+.Table1 td{
+	background-color: #FFFFFF;
+	min-height: 300px;
+	font-size: 16pt;
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
 #Pascal8 {
 	padding-left: 36px;
+	font-size: 16pt;
 }
 
 #Python8 {
 	padding-left: 50px;
+	font-size: 16pt;
 }
 
 #Pascal11 {
@@ -208,5 +229,33 @@ table th{
 }
 
 #Python11 {
+	padding-left: 50px;
+}
+
+#Pascal19 {
+	padding-left: 36px;
+	font-size: 16pt;
+}
+
+#Python19 {
+	padding-left: 50px;
+	font-size: 16pt;
+}
+
+#Pascal21 {
+	padding-left: 36px;
+	font-size: 12pt;
+}
+
+#Python21 {
+	padding-left: 50px;
+	font-size: 12pt;
+}
+
+#Ns17 {
+	padding-left: 36px;
+}
+
+#Nr17 {
 	padding-left: 50px;
 }

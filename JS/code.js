@@ -598,12 +598,31 @@ switch (a) {
 
 et = document.getElementById("ET17");
 var ans17;
+a = getRandom(1,2);
+et.innerHTML = space + "В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» — символ «&».<br>" + space + "В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.";
+switch (a) {
+	case 1:
+		n1 = getRandom(440,527);
+		n2 = getRandom(440,527);
+		n3 = getRandom(511,626);
+		ans17 = document.getElementById("Nr1");
+		ans17.innerHTML = n1;
+		ans17 = document.getElementById("Nr2");
+		ans17.innerHTML = n2;
+		ans17 = document.getElementById("Nr4");
+		ans17.innerHTML = n3;
+		ans17 = n1 + n2 - n3;
+		break;
+	case 2:
+
+		break;
+}
 
 
 
 et = document.getElementById("ET18");
 var ans18;
-a = getRandom(1,3);
+a = getRandom(1,4);
 switch (a) {
 	case 1:
 		n1 = getRandom(5,14);
@@ -627,6 +646,101 @@ switch (a) {
 		ans18 -= 1;
 		break;
 	case 3:
+		n1 = getRandom(2,7);
+		n2 = getRandom(2,7);
+		t = getRandom(20,61);
+		i = getRandom(20,61);
+		et.innerHTML = "Для какого <b>наименьшего</b> целого неотрицательного числа А выражение:<br><br>";
+		et.innerHTML += space + space + "(" + n1 + "y + " + n2 + "x < A) ∨ (x > " + t + ") ∨ (y > " + i + ")<br><br>";
+		et.innerHTML += "тождественно истинно, то есть принимает значение 1 при любых целых неотрицательных x и y?";
+		ans18 = n1*i + n2*t + 1;
+		break;
+}
+
+
+
+et = document.getElementById("ET19");
+var ans19 = 0;
+a = getRandom(1,3);
+x = new Array();
+for (i = 0; i <= 9; i++) {
+	x.push(getRandom(0,11));
+};
+switch (a) {
+	case 1:
+		et.innerHTML = space + "Представленный ниже на двух языках программирования фрагмент программы обрабатывает элементы одномерного целочисленного массива A с индексами от 0 до 9. Перед началом выполнения данного фрагмента эти элементы массива имели значения ";
+		for (i = 0; i <= 8; i++) {
+			et.innerHTML += x[i] + ", ";
+		};
+		et.innerHTML += x[9];
+		et.innerHTML += " (т. е. A[0] = "  + x[0] +", A[1] = " + x[1] + ", …, A[9] = " + x[9] + "). Определите значение переменной s после выполнения фрагмента.";
+		n1 = getRandom(2,4);
+		ans19 = document.getElementById("Python19");
+		ans19.innerHTML = "n = 10<br>s = 0<br>for i in range(1,n):<br>" + space + "if A[i-1] > " + n1 + "*A[i]:<br>" + space + space + "A[i] = " + n1 + "*A[i-1]<br>" + space + space + "s = s + A[i]";
+		ans19 = document.getElementById("Pascal19");
+		ans19.innerHTML = "N := 10;<br>s := 0;<br>for i := 1 to N-1 do<br>" + space + "begin<br>" + space + space + "if A[i-1] > " + n1 + "*A[i] then<br>" + space + space + space + "begin<br>" + space + space + space + space + "A[i] := " + n1 + "*A[i-1];<br>" + space + space + space + space + "s := s + A[i];<br>" + space + space + space + "end;<br>" + space + space + "end;";
+		ans19 = 0;
+		for (i = 1; i <= 9; i++) {
+			if (x[i-1]>2*x[i]) {
+				x[i] = 2*x[i-1];
+				ans19 = ans19 + x[i];
+			}
+		};
+		break;
+	case 2:
+		x.push(getRandom(0,11));
+		et.innerHTML = space + "В программе используется одномерный целочисленный массив A с индексами от 0 до 10. Значения элементов равны ";
+		for (i = 0; i <= 9; i++) {
+			et.innerHTML += x[i] + ", ";
+		};
+		et.innerHTML += x[10];
+		et.innerHTML += "  соответственно, т.е. A[0] = " + x[0] + ", A[1] = " + x[1] + " и т.д.<br>" + space + "Определите значение переменной c после выполнения следующего фрагмента этой программы, записанного ниже на пяти языках программирования.";
+		ans19 = document.getElementById("Python19");
+		ans19.innerHTML = "c = 0<br>for i in range(1,11):<br>" + space + "if A[i-1] > A[i]:<br>" + space + space + "c = c + 1<br>" + space + space + "t = A[i]<br>" + space + space + "A[i] = A[i - 1]<br>" + space + space + "A[i-1] = t<br>";
+		ans19 = document.getElementById("Pascal19");
+		ans19.innerHTML = "c := 0;<br>for i := 1 to 10 do<br>" + space + "begin<br>" + space + space + "if A[i-1] > A[i] then<br>" + space + space + space + "begin<br>" + space + space + space + space + "c := c + 1;<br>" + space + space + space + space + "t := A[i];<br>" + space + space + space + space + "A[i] := A[i-1];<br>"+ space + space + space + space + "A[i-1] := t;<br>" + space + space + space + "end;<br>" + space + space + "end;";
+		n1 = 0;
+		ans19 = 0;
+		for (i = 1; i <= 10; i++) {
+			if (x[i-1]>x[i]) {
+				ans19 = ans19 + 1;
+				n1 = x[i];
+				x[i] = x[i-1];
+				x[i-1] = n1;
+			}
+		};
+		break;
+}
+
+
+
+et = document.getElementById("ET21");
+var ans21 = 0;
+a = getRandom(1,2);
+et.innerHTML = "Определите, какое число будет напечатано в результате выполнения следующего алгоритма: ";
+switch (a) {
+	case 1:
+		n1 = getRandom(6,10);
+		n2 = getRandom(10,19);
+		t = getRandom(3,9);
+		ans21 = document.getElementById("Python21");
+		ans21.innerHTML = "def f(x):<br>" + space + "return x*x - " + n1 + "*x + " + n2 + "<br>" + "a = -" + t + "<br>b = " + t + "<br>M=a<br>R=f(a)<br>for t in range(a, b+1):<br>" + space + "if (f(t) > R):<br>" + space + space + "M = t<br>" + space + space + "R = f(t)<br>" + "print(R)";
+		ans21 = document.getElementById("Pascal21");
+		ans21.innerHTML = "Function F(x:integer): integer;<br>" + space + "begin<br>" + space + space + "F := x*x - " + n1 + "*x + " + n2 + ";<br>" + space + "end;<br>begin<br>" + space + "a := -" + t + "; b := " + t + ";<br>" + space + "M := a; R := F(a);<br>" + space + "for t := a to b do<br>" + space + space + "begin<br>" + space + space + space + "if (F(t) > R) then<br>" + space + space + space + space + "begin<br>" + space + space + space + space + space + "M := t;<br>" + space + space + space + space + space + "R := F(t)<br>" + space + space + space + space + "end;<br>" + space + space + "end;<br>" + space + space + "write(R);<br>" + "end.";
+		function parabola (ex) {
+			return (ex*ex-n1*ex+n2);
+		}
+		v = (-1)*t;
+		et.innerHTML += space + space + space + parabola(v);
+		ans21 = parabola(v);
+		for (i = v; i<= t; i++) {
+			if (parabola(i) > ans21) {
+				ans21 = parabola(i);
+			}
+		};
+		et.innerHTML += space + space + space + ans21;
+		break;
+	case 2:
 		
 		break;
 }
@@ -766,11 +880,50 @@ function Answer () {
 
 
 
+	inp = document.getElementById("EA17").value;
+	sect = document.getElementById("b17");
+	if (inp == ans17) {
+		sect.style.backgroundColor = "rgb(" + colg + ")";
+	}
+	else if (inp == "") {
+		sect.style.backgroundColor = "rgb(255,255,153)";
+	}
+	else {
+		sect.style.backgroundColor = "rgb(205,92,92)";
+	}
 
 
 	inp = document.getElementById("EA18").value;
 	sect = document.getElementById("b18");
 	if (inp == ans18) {
+		sect.style.backgroundColor = "rgb(" + colg + ")";
+	}
+	else if (inp == "") {
+		sect.style.backgroundColor = "rgb(255,255,153)";
+	}
+	else {
+		sect.style.backgroundColor = "rgb(205,92,92)";
+	}
+
+
+
+	inp = document.getElementById("EA19").value;
+	sect = document.getElementById("b19");
+	if (inp == ans19) {
+		sect.style.backgroundColor = "rgb(" + colg + ")";
+	}
+	else if (inp == "") {
+		sect.style.backgroundColor = "rgb(255,255,153)";
+	}
+	else {
+		sect.style.backgroundColor = "rgb(205,92,92)";
+	}
+
+
+
+	inp = document.getElementById("EA21").value;
+	sect = document.getElementById("b21");
+	if (inp == ans21) {
 		sect.style.backgroundColor = "rgb(" + colg + ")";
 	}
 	else if (inp == "") {
